@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mein Portfolio</title>
+    <style>
+        /* Allgemeine Stile */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #ff7f00;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        section {
+            padding: 50px 0;
+        }
+
+        section h2 {
+            margin-top: 0;
+            text-align: center;
+            font-size: 28px;
+        }
+
+    
+    /* CSS für Hover-Effekte */
+    nav ul li a:hover {
+        transform: translateY(-3px); /* Bewegung um 3 Pixel nach oben */
+    }
+
+
+
+        /* Bild-Stile */
+        .portrait-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 50%;
+            border: 5px solid #fff; /* Rahmen hinzugefügt */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .portrait {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+
+        .portrait-container:hover .portrait {
+            transform: scale(1.1);
+        }
+
+        .info {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            transition: opacity 0.3s ease;
+            opacity: 0;
+        }
+
+        .portrait-container:hover .info {
+            opacity: 1;
+        }
+
+        /* Portfolio-Stile */
+        .portfolio-item {
+            margin-bottom: 30px;
+        }
+
+        .portfolio-item img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header style="background-color: #ff7f00; padding: 20px 0;">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #fff;">
+            <h1 style="font-size: 36px; color: #fff; text-transform: uppercase; letter-spacing: 2px; margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Mein Portfolio</h1>
+            <nav>
+                <ul style="list-style: none; padding: 0; margin: 0; display: flex;">
+                    <li style="margin-right: 20px;">
+                        <a href="#about" style="text-decoration: none; color: #fff; font-size: 18px;">Über mich</a>
+                    </li>
+                    <li>
+                        <a href="#projects" style="text-decoration: none; color: #fff; font-size: 18px;">Projekte</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    
+    
+    
+
+    <section id="about">
+        <div class="container">
+            <h2>Über mich</h2>
+            <div class="portrait-container">
+                <img src="ich.jpg" alt="Dein Bild" class="portrait">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="introduction" style="background-color: #f0f0f0; padding: 20px; border-radius: 10px;">
+        <div class="container">
+            <h2 style="text-align: center;">Vorstellung</h2>
+            <div style="background-color: #fff; padding: 20px; border-radius: 10px;">
+                <p>Hallo! Mein Name ist Danny und ich bin ein leidenschaftlicher Developer. Ich habe umfangreiche Erfahrung in Python und genieße es, kreative Lösungen für komplexe Probleme zu entwickeln.</p>
+                <p>Meine Stärken liegen im Bereich des Codings. Ich bin immer auf der Suche nach neuen Herausforderungen und Möglichkeiten, mich weiterzuentwickeln.</p>
+                <p>Im Support bei INVPro zu arbeiten war eine bereichernde Erfahrung. Ich hatte die Gelegenheit, an einem Projekt mit Micro-Servern zu arbeiten, was mir wertvolle Einblicke verschafft hat.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Projekte</h2>
+            <div class="portfolio-item" style="background-color: #f0f0f0; padding: 20px; border-radius: 10px;">
+                <div style="display: flex; align-items: center;">
+                    <div style="border: 1px solid #ccc; padding: 5px; border-radius: 5px; margin-right: 20px;">
+                        <img src="projekt1.jpg" alt="Projekt 1" style="max-width: 80px; border-radius: 5px;">
+                    </div>
+                    <div>
+                        <h3>Discord Bot</h3>
+                        <p>Eins meiner Projekte war ein Discord-Bot, der verschiedene Funktionen umfasste, darunter ein Warnsystem, ein Report-System und ein Ticketsystem. Der Bot wurde entwickelt, um Administratoren bei der Moderation von Discord-Servern zu unterstützen, indem er ihnen Werkzeuge zur Verfügung stellte, um Benutzer zu warnen, unangemessene Inhalte zu melden und Support-Tickets zu verwalten. Das Warnsystem ermöglichte es den Administratoren, Verstöße gegen die Serverregeln zu dokumentieren und angemessene Maßnahmen zu ergreifen. Das Report-System erlaubte es den Benutzern, potenzielle Regelverstöße zu melden, die dann von den Moderatoren überprüft wurden. Das Ticketsystem bot den Benutzern die Möglichkeit, Support-Anfragen zu senden und den Fortschritt ihrer Anfragen zu verfolgen. Insgesamt war Projekt 1 ein wichtiger Beitrag zur Verwaltung und Organisation von Discord-Communities.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Weitere Projekte hier einfügen -->
+        </div>
+        <div class="container">
+            <div class="portfolio-item" style="background-color: #f0f0f0; padding: 20px; border-radius: 10px;">
+                <div style="display: flex; align-items: center;">
+                    <div style="border: 1px solid #ccc; padding: 5px; border-radius: 5px; margin-right: 20px;">
+                        <img src="mimi.png" alt="Projekt 2" style="max-width: 80px; border-radius: 5px;">
+                    </div>
+                    <div>
+                        <h3>Micro-Minecraft Server</h3>
+                        <p>Arbeiten im Support bei INVPro war eine bereichernde Erfahrung. Ich hatte die Gelegenheit, an einem Projekt mit Micro-Servern zu arbeiten, was mir wertvolle Erfahrungen verschafft hat. Das Projekt ermöglichte es mir, meine Kenntnisse im Bereich Serververwaltung und -wartung zu vertiefen und praktische Erfahrungen im Umgang mit kleinen Serverumgebungen zu sammeln. Es war eine herausfordernde, aber äußerst lohnende Erfahrung, die mir half, meine Fähigkeiten als Support-Mitarbeiter zu verbessern und mich weiterzuentwickeln.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Weitere Projekte hier einfügen -->
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Mein Portfolio. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
